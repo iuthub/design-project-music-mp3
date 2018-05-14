@@ -6,7 +6,7 @@
 | ------------- |:-----------------------------:| ---------:|
 | U1610075      | Ibrat Abidov                  | 002       |
 | U1610075      | Ilkhom Rakhimov               | 003       |
-| U1610092      | Jamoliddinkhoja Odilkhojaev   | 002       |
+| U1610092      | Jamoliddinkhuja Odilkhujaev   | 002       |
 | U1610120      | Anora Kosimova                | 002       |
 | U1610148      | Mokhlaroyim Tuychibaeva       | 002       |
 
