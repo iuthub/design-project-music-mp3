@@ -1,5 +1,14 @@
 # Internet Programming: Design Project Assignment
 
-Find `ip_design_project.pdf` file in this folder, and refer to all the instructions given there. 
+### Team members:
+    
+| Student ID    |Name                           | Section   |
+| ------------- |:-----------------------------:| ---------:|
+| U1610075      | Ibrat Abidov                  | 002       |
+| U1610075      | Ilkhom Rakhimov               | 003       |
+| U1610092      | Jamoliddinkhoja Odilkhojaev   | 002       |
+| U1610120      | Anora Kosimova                | 002       |
+| U1610148      | Mokhlaroyim Tuychibaeva       | 002       |
 
-You have to submit your project into this repository before 06.05.2018.
+### [Github link](https://github.com/iuthub/design-project-music-mp3)
+### [Website link](http://89.236.217.5:6607/ip.loc1/ip.loc/)
