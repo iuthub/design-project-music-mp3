@@ -10,5 +10,6 @@
 | U1610120      | Anora Kosimova                | 002       |
 | U1610148      | Mokhlaroyim Tuychibaeva       | 002       |
 
+Report is located in current directory and named as "Project REPORT.docx"
 ### [Github link](https://github.com/iuthub/design-project-music-mp3)
 ### [Website link](http://89.236.217.5:6607/ip.loc1/ip.loc/)
