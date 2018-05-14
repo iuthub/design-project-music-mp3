@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-md-9">
                     <div class="profile-change">
-                        <form action="{{route('users.update')}}" method="patch" id="change">
+                        <form action="{{route('users.update')}}" method="post" id="change">
                             <div class="change">
                                 <div class="change-field">
                                     <label for="changename">Name*</label>
@@ -92,9 +92,31 @@
                                     <input type="password" placeholder="" name="confirmpassword" id="confirmpassword">
                                 </div>
                             </div>
+                            <button type="submit" form="change" value="Sumbit" class="edit-button">Edit</button>
                         </form>
+                        <script>
+                            $(document).ready(function () {
+                                $('form').submit(function (event) {
+                                    var formData = {
+                                        'name': $('input[name=name]').val(),
+                                        'email': $('input[name=email]').val(),
+                                        'password': $('input[name=password]').val(),
+                                        'confirmpassword': $('input[name=confirmpassword]').val()
+                                    };
+                                    $.ajax({
+                                        type: 'post',
+                                        url: '{{route('users.update')}}',
+                                        data: formData,
+                                        dataType: 'json',
+                                        encode: true
+                                    }).done(function (data) {
+                                        console.log(data);
+                                    });
+                                    event.preventDefault();
+                                });
+                            });
 
-                        <button type="submit" form="change" value="Sumbit" class="edit-button">Edit</button>
+                        </script>
 
                     </div>
                 </div>

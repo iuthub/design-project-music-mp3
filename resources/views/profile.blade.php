@@ -76,6 +76,15 @@
             <div class="col-md-9">
                 <div class="profile-change">
                     <form action="{{route('users.update')}}" method="patch" id="change">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <div class="change">
                             <div class="change-field">
                                 <label for="changename">Name*</label>

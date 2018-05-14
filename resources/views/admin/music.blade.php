@@ -27,12 +27,12 @@
                     </label></h1>
                 </form>
             </div>
-            <div class="col-md-3">
-                <div class="navbar_search ">
-                    <i class="fa fa-search search-icon" id="stoggle"></i>
-                    <input type="search" placeholder="Search" class="search_input">
-                </div>
-            </div>
+            {{--<div class="col-md-3">--}}
+                {{--<div class="navbar_search ">--}}
+                    {{--<i class="fa fa-search search-icon" id="stoggle"></i>--}}
+                    {{--<input type="search" placeholder="Search" class="search_input">--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
         <div class="admin-table">
             <div class="container">

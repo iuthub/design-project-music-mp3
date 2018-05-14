@@ -34,7 +34,7 @@ Auth::routes();
 Route::group(['prefix'=>'profile', 'middleware'=>['web', 'auth']], function(){
     Route::get('/',['uses'=>'UserController@profile', 'as'=>'profile']);
     Route::get('/playlist', ['uses'=>'UserController@show_playlist', 'as'=>'playlist']);
-    Route::patch('update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
+    Route::post('/update',  ['as' => 'users.update', 'uses' => 'UserController@update']);
     Route::get('/img-upload',['uses'=>'UserController@imgUpload', 'as'=>'img-upload']);
     Route::post('/img-upload',['uses'=>'UserController@imgUpload', 'as'=>'img-upload']);
     Route::post('/playlist',['uses'=>'UserController@musicUpload', 'as'=>'upload.music']);

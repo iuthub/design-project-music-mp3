@@ -13,6 +13,8 @@ use getid3_lib;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Image;
 use DB;
+use Validator;
+use Hash;
 class UserController extends Controller
 {
     public function profile(){
@@ -27,14 +29,22 @@ class UserController extends Controller
     }
     public function update(User $user, Request $request)
     {
-        $data = $request->validate([
+        $user=Auth::user();
+        $data =Validator::make($request->all(),[
             'name' => 'required',
             'email' => 'required|email|unique:users',
         ]);
-
-        $user->fill($data);
-        $user->save();
-        Flash::message('Your account has been updated!');
+            $user=Auth::user();
+            if($request->password==$request->confirmpassword&& !$data->false()){
+        $user->update(array(
+            'name'=> $request ->name,
+            'email'=> $request ->email,
+            'password'=>Hash::make($request->password),
+        ));
+        }
+            else{
+               return  back()->with($data->errors()->add('field', 'wrong input data'));
+            }
         return back();
     }
     public function musicUpload(Request $request, User $user)

@@ -26,21 +26,21 @@ class AdminUpdateController extends Controller
             DB::table('musics')
                 ->where('id', $request->music_id)
                 ->update(array('artist' => $request->artist,
-                                'genre'=> $request ->genre,
-                                'name'=> $request ->title,
-                                'set_global'=>1,
-                                'suggested'=>0,
+                    'genre'=> $request ->genre,
+                    'name'=> $request ->title,
+                    'set_global'=>1,
+                    'suggested'=>0,
                 ));
-                $user= (new Music)->find($request->music_id)->user()->get();
+            $user= (new Music)->find($request->music_id)->user()->get();
 
-                $to=$user->email;
+            $to=$user->email;
             Mail::send('emails.send', ['username' => $user->name, 'status' => "Approved"], function ($message)use($to){
 
                 $message->from('iutmusic.mp3@mail.ru', 'Music MP3');
                 $message->to($to);
                 $message->subject('Suggest status');
             });
-                return back();
+            return back();
         }
     }
 
